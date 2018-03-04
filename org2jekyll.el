@@ -525,7 +525,7 @@ Publication skipped" error-messages)
 
 (defun org2jekyll-post-p (layout)
   "Determine if the LAYOUT corresponds to a post."
-  (string= "post" layout))
+  (or (string= "single" layout) (string= "post" layout)))
 
 (defun org2jekyll-page-p (layout)
   "Determine if the LAYOUT corresponds to a page."
